@@ -1,0 +1,362 @@
+*{
+    font-family: "Playfair Display", serif;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(4,38,38);
+    background: linear-gradient(76deg, rgb(2, 59, 59) 20%, rgba(38,4,11,1) 80%);
+    color: rgb(159, 157, 157);
+    width: 100%;
+    z-index: 999;
+    flex-wrap: wrap;
+}
+
+header h2{
+    font-size: 30px;
+    font-family: "Playwrite CU", cursive;
+    padding-left: 10%;
+}
+
+header h2 span{
+    animation-name: span;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes span{
+    0%{
+        color:rgb(205, 201, 201);
+    }
+
+    15%{
+        color:rgb(152, 148, 148) ;
+    }
+
+    30%{
+        color: rgb(101, 101, 101);
+    }
+
+    45%{
+        color: rgb(52, 51, 51);
+    }
+
+    60%{
+        color: rgb(22, 22, 22);
+    }
+
+    70%{
+        color: rgb(52, 51, 51);
+    }
+
+    80%{
+        color: rgb(101, 101, 101);
+    }
+    90%{
+        color:rgb(152, 148, 148) ;
+    }
+
+    100%{
+        color:rgb(205, 201, 201);
+    }
+}
+
+header label{
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width:991px){
+    header label{
+        display: block;
+        margin-right: 10%;
+        cursor: pointer;
+    }
+
+    header #check:checked ~ nav{
+        display: block;
+    }
+
+    header nav{
+        width: 100%;
+        display: none;
+    }
+
+    header nav ul{
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+header nav{
+    margin-left: 50%;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav ul li{
+    list-style: none;
+    padding: 10px;
+    padding-right: 20px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: rgb(159, 157, 157);
+    font-size: 20px;
+    transition: .3s ease;
+}
+
+header nav ul li a:hover{
+    color: rgb(225, 219, 219);
+}
+
+.cart{
+    list-style: none;
+    margin-right: 20px;
+}
+.cart #cart{
+    cursor: pointer;
+}
+
+.cart li a i{
+    color: rgb(159, 157, 157);
+    font-size: 20px;
+}
+
+/* end header */
+/* start cart */
+.creatcart{
+    position: absolute;
+    color: rgb(159, 157, 157);
+    background-color: rgb(4, 52, 52);
+    top:5%;
+    right: -100%;
+    width: 20%;
+    height: 150vh;
+    text-align: center;
+}
+
+.creatcart.active{
+    right: 0;
+}
+.creatcart i{
+    padding-left: 220px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.creatcart i:hover{
+    color: red;
+
+}
+
+.finish{
+    position: absolute;
+    right: 150px;
+    top: 93%;
+    font-size: 25px;
+}
+
+.all{
+    display: flex;
+}
+
+.btn1{
+    font-size: 25px;
+    width: 80px;
+    border-radius: 10px;
+    border: 0;
+    color: rgb(91, 91, 91);
+    transition: 0.5s ease;
+}
+
+.btn1:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: black;
+}
+
+@media (max-width:991px){
+    .creatcart{
+        width: 30%;
+    }
+    .finish{
+        position: absolute;
+        right: 100px;
+    }
+}
+
+
+/* end cart */
+
+/* start home */
+.home{
+    background: rgb(4,38,38);
+    background: linear-gradient(76deg, rgb(2, 59, 59) 20%, rgba(38,4,11,1) 80%);
+    width: 100%;
+    height: 100vh;
+    color: rgb(159, 157, 157);
+    display: flex;
+}
+
+.home div{
+    width: 80%;
+    margin: auto;
+}
+
+.home div h1{
+    font-size: 40px;
+}
+
+.home div p{
+    font-size: 20px;
+}
+
+.home div button{
+    margin-top: 20px;
+    transition: 0.6s ease;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.home div button a{
+    text-decoration: none;
+    color: rgb(91, 91, 91);
+}
+
+.home div button:hover{
+    cursor: pointer;
+    background-color: black;
+    transform: scale(1.1);
+}
+
+/* end home */
+.h1{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.img{
+    width: 280px;
+    height: 280px;
+}
+
+.product{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(550px,1fr));
+    gap: 20px;
+}
+
+.btn34{
+    color: rgb(91, 91, 91);
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 7px;
+    border: none;
+    transition: 0.4s ease;
+}
+
+.btn34:hover{
+    cursor: pointer;
+    background-color: black;
+    transform: scale(1.1);
+}
+
+.product-box{
+    background: rgb(4,38,38);
+    background: linear-gradient(76deg, rgb(2, 59, 59) 20%, rgba(38,4,11,1) 80%);  
+    margin: 10px; 
+    height: 50vh;
+    width: 600px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+}
+
+.product-box span{
+    font-size: 25px;
+}
+
+.payment{
+    position: absolute;
+    right: 600px;
+    top: 10px;
+    background-color: rgb(0, 0, 0);
+    width: 350px;
+    height: 60vh;
+    color: rgb(159, 157, 157);
+    padding: 30px;
+    font-size: 25px;
+    border-radius: 10px;
+    z-index: 999;
+    display: none;
+}
+.payment.creat{
+    display: block;
+}
+
+.paytitle{
+    margin-bottom: 20px;
+}
+
+.payment input{
+    width: 300px;
+    height: 25px;
+    font-size: 18px;
+}
+
+.payment .cardIcons img{
+    width: 150px;
+    height: 100px;
+}
+
+@media (max-width:991px) {
+    .payment{
+        right: 200px;
+        width: 300px;
+        font-size: 20px;
+        height: 60vh;
+    }
+    .payment .cardIcons img{
+        width: 120px;
+    }
+}
+
+.box img{
+    width: 125px;
+    height: 175px;
+}
+.change{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media (max-width:600px) {
+    .product-box{
+        width: 430px;
+    }
+}
+
+.cartList{
+    display: flex;
+    flex-direction: column;
+}

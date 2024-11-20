@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up | Apple</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <section class="login"> 
+        <h1>Creat a new accuont<i class="fa-solid fa-user-plus"></i></h1>
+        <div class="table">
+            <table>
+                <tr>
+                    <th><label for="name">Name:</label></th>
+                    <td><input type="text" id="name" placeholder="Frist and last name"></td>
+                </tr>
+                <tr>
+                    <th>
+                        <h6 class="alert" id="alert-name"></h6>
+                    </th>
+                </tr>
+                <br>
+                <br>
+                <tr>
+                    <th><label for="email">E-mail:</label></th>
+                    <td><input type="email" id="email" placeholder="Enter your E-mail"></td>
+
+                </tr>
+                <tr>
+                    <th>
+                        <h6 class="alert" id="alert-email"></h6>
+                    </th>
+                </tr>
+                <br>
+                <br>
+                <tr>
+                    <th><label for="password">Password:</label></th>
+                    <td><input type="password" id="password" placeholder="At least 6 characters"></td>
+                </tr>
+                <tr>
+                    <th>
+                        <h6 class="alert" id="alert-password"></h6>
+                    </th>
+                </tr>
+                <br>
+                <br>
+                <tr>
+                    <th><label for="confirm">Confirm Password:</label></th>
+                    <td><input type="password" id="conpassword"></td>
+                </tr>
+                <tr>
+                    <th>
+                        <h6 class="alert" id="alert-conpassword"></h6>
+                    </th>
+                </tr>
+                <br>
+                <br>
+                <tr class="link">
+                    <td><a href="signup.html">already have an account</a></td>
+                    <td> <button id="btn">Sign Up</button></td>
+                </tr>
+
+            </table>
+
+        </div>
+    </section>
+
+
+    <script src="login.js"></script>
+
+</body>
+</html>
